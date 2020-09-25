@@ -107,7 +107,7 @@ const Links = () =>{
           <Link href="https://twitter.com/MeFaltaUnVeran" target="_blank">
             <Twttr/>
           </Link>     
-          <Link href="mailto:person@example.com" target="_blank">
+          <Link href="mailto:trolleros300@gmail.com" target="_blank">
             <Eml/>
           </Link>
         </div>
