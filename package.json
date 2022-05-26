@@ -1,28 +1,41 @@
 {
-  "name": "mefaltaunveranoweb",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://codertysmi.github.io",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@fullpage/react-fullpage": "0.1.25",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.7.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^4.0.0",
+    "p5": "^1.4.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1",
+    "react-spinners-css": "^2.0.1",
+    "three": "^0.140.2",
+    "update": "^0.7.4",
+    "vanta": "^0.5.22",
+    "web-vitals": "^2.1.4"
   },
-  
-"resolutions": {
-    "styled-components": "^5"
-   },
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
