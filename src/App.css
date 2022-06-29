@@ -65,9 +65,13 @@
 }
 .test{
   backdrop-filter:blur(20px) brightness(110%);
-
   
 }
+
+.slide0{
+  background-color: #282c34;
+}
+
 .section2 {
   background-color: #102424;
   min-height: 100%;
@@ -159,6 +163,34 @@
   
 }
 
+.textProject {
+  font-size: 30px;
+  margin-bottom: 50px;
+  margin-top: -100px;
+}
+
+@keyframes onHoverAnimation {
+  0% {
+      background-color: #FF0;  
+  }
+  100% {
+      background-color: #AD310B;
+  }
+}
+
+ a {
+  background-color: #FF0;
+  
+  -webkit-transition: background-color 1000ms linear;
+  -moz-transition: background-color 1000ms linear;
+  -o-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+a {
+  background-color: #AD310B;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

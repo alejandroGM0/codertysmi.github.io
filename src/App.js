@@ -6,6 +6,9 @@ import logo_cpepa from './images/logo_cpepa.png'
 import logo_fd from './images/logo-futuro-digital.png'
 import fiver_logo from './images/fiver_logo.png'
 import upwork_logo from './images/Upwork-Logo.png'
+import groomusic from './images/groomusic.png'
+import spartbot from './images/spartbot.png'
+import pc_tracker from './images/pc_tracker.png'
 import './App.css';
 import React, { useState, useEffect, useRef } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
@@ -25,6 +28,8 @@ import { Home4 } from 'styled-icons/remix-fill';
 import { TypeH2, TypeH3 } from 'styled-icons/bootstrap';
 import Tech from "./Tech.js"
 import Experience from "./Experience.js"
+import Contact from "./Contact.js"
+import Project from "./Project.js"
 import Fade from '@mui/material/Fade';
 import Slide from '@mui/material/Slide';
 import Collapse from '@mui/material/Collapse';
@@ -33,6 +38,7 @@ import GLOBE from "vanta/dist/vanta.topology.min";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import * as THREE from "three";
 import * as p5 from "p5";
+import Alert from '@mui/material/Alert';
 
 import IconButton from '@mui/material/IconButton';
 import { Circle, Heart } from 'react-spinners-css';
@@ -46,6 +52,14 @@ const ContactButton = styled(Button)(({ theme }) => ({
   borderRadius: 9,
 }));
 
+const ProjectButton = styled(Button)(({ theme }) => ({
+  color: theme.palette.getContrastText("#eca343"),
+  backgroundColor: "white",
+  '&:hover': {
+    backgroundColor: "#d9d9d9",
+  },
+  borderRadius: 9,
+}));
 
 
 const Credits = {enabled: false, label: 'Made with fullPage.js', position: 'right'}
@@ -59,12 +73,21 @@ function App(fullpageProps) {
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = useRef(null);
   const [display, setDisplay] = useState("none");
+  const [slide, setSlide] = useState(false);
 
   useEffect(() => {
       if (page === 1){
           setAnimate(true)
           console.log(animate)
 
+      }
+      else if (page=== 3){
+        setSlide(true)
+        console.log(slide)
+
+      }
+      else{
+        setSlide(false)
       }
       if (!vantaEffect) {
         setVantaEffect(
@@ -91,7 +114,7 @@ function App(fullpageProps) {
       return () => {
 
       };
-    }, [vantaEffect, page, animate]);
+    }, [vantaEffect, page, animate, slide]);
 
 
   function afterLoad(origin, destination, direction){
@@ -109,11 +132,12 @@ function App(fullpageProps) {
     }
   }
 
+  if(page==2){}
 
   return (
     <div ref={vantaRef} style={{backgroundColor: "#102424"}}>    
     {loading}
-   
+
     <div style={{display: ""}}>
 
     <AppBar elevation={0} color="transparent" sx={{}}  position="fixed">
@@ -126,17 +150,23 @@ function App(fullpageProps) {
       <Button href='#About' variant="text" sx={{color: "white", borderRadius: 3}}>About</Button>
       <Button href='#Experience' variant="text" sx={{color: "white", borderRadius: 3}}>Experience</Button>
       <Button href='#Projects' variant="text" sx={{color: "white", borderRadius: 3}}>Projects</Button>
-      <ContactButton href='#Projects' disableElevation variant="contained" sx={{color: "white"}}>Contact</ContactButton>
+      <ContactButton href='#Contact' disableElevation variant="contained" sx={{color: "white"}}>Contact</ContactButton>
 
       </div>
 
     </Toolbar>
     </AppBar>
+    <div style={{position : "absolute", marginTop: "46%", marginLeft: "3%", zIndex: 99}}>
+        <Alert style={{ verticalAlign: "bottom"}} variant="filled" severity="warning">
+        I AM IN THE PROCESS OF CHANGING PORTFOLIO.
+        STILL IN DEVELOPMENT
+      </Alert>
+    </div>
     <ReactFullpage
       afterLoad={afterLoad}
       licenseKey={"YOUR_LICENSE_KEY"}
       credits =  {Credits}
-      anchors={["Home", "About", "Experience", "Projects"]}
+      anchors={["Home", "About", "Experience", "Projects", "Contact"]}
     render={({ state, fullpageApi }) => {
       console.log(page)
       return (
@@ -252,16 +282,16 @@ function App(fullpageProps) {
           </div>
           <div className="section">
             <div className="section3" >
-            <Box m={2}>
+            <Box m={0}>
             <Grid style={{width: "100%", height: "100%"}}  container justifyContent="space-evenly" spacing={0}>
                 <Grid item xs={12}>
                     <div className="text2" style={{  justifyContent: "center", display: "flex"}}>
                     <h1>
-                      Worked with
+                      Worked in
                     </h1>
                   </div>
                 </Grid>
-              <Grid className="test" style={{borderRadius: "25px", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px", marginTop: "50px"}} item xs={12}>
+              <Grid className="test" style={{borderRadius: "25px", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px", marginTop: "50px"}} item xs={11}>
                 <Box m={0}>
                 <Grid style={{marginBottom: "20px"}} container spacing={3}>
                   <Grid style={{display: "flex", justifyContent: "center", alignItems: "center", alignContent: "center"}} item xs={12} md={6} lg={6} xl={4}>
@@ -292,25 +322,108 @@ function App(fullpageProps) {
             </Box>
           </div>
           </div>
-          <div className='section'>
-            <div className="section2">
-            <div className="text2" style={{  textAlign: "center"}}>
-                    <h1>
-                    🚧 
-                    <br></br>This portfolio is under construction sorry 😬
-                    </h1>
-                    <a>codertysmi@gmail.com</a>
-                    <p>The site is still under construction, so it doesn't work in all browsers yet.</p>
-                  </div>
+          <div className='section'>          
+            <div className="slide" style={{backgroundColor: "#121215", minHeight: "100%",color: "whitesmoke",display: "flex",justifyContent: "center"}}>
+            <Box m={8}>
+              <Grid container spacing={2}>
+                    <Grid item xs={12} style={{alignText: "center", display: "flex", alignItems: "center", justifyContent: "center",}}>
+                      <div className="textProject" style={{  justifyContent: "center", display: "flex"}}>
+                        <h1>
+                          GrooMusic
+                        </h1>
+                      </div>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={6}>
+      
+                      <Project page={page} image={groomusic}/>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={6} style={{}}>
+                      <div style={{marginTop: "25px", alignText: "center", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column",}}>
+                      <Typography variant="body1">This website allows you to create private or public rooms to listen to music synchronously with other people, you can modify the permissions of each member or include your room elsewhere with the API.</Typography>
+                      </div>
+                      <ProjectButton size="medium" style={{marginTop: "25px"}}>Go</ProjectButton>
+                    </Grid>
+                    
+              </Grid>
+
+            </Box>
+            </div>
+            <div className="slide" style={{backgroundColor: "#1F1F1F", minHeight: "100%",color: "whitesmoke",display: "flex",justifyContent: "center"}}>
+            <Box m={8}>
+              <Grid container spacing={2}>
+                    <Grid item xs={12} style={{alignText: "center", display: "flex", alignItems: "center", justifyContent: "center",}}>
+                      <div className="textProject" style={{  justifyContent: "center", display: "flex"}}>
+                        <h1>
+                          SpartBot
+                        </h1>
+                      </div>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={6}>
+                      <Project page={page} image={spartbot}/>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={6} style={{alignText: "center"}}>
+                    <div style={{marginTop: "25px", alignText: "center", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column",}}>
+                      <Typography variant="body1">A management application for companies and communities, this tool allows moderation, ticket management and customer protection, it also has multiple integrations with Discord, Telegram, Slack and others.</Typography>
+                    </div>
+                    <ProjectButton style={{marginTop: "25px"}}>Go</ProjectButton>
+                    </Grid>
+                    
+              </Grid>
+
+            </Box>
+            </div>         
+            <div className="slide" style={{backgroundColor: "#383838", minHeight: "100%",color: "whitesmoke",display: "flex",justifyContent: "center"}}>
+            <Box m={8}>
+              <Grid container spacing={2}>
+                    <Grid item xs={12} style={{alignText: "center", display: "flex", alignItems: "center", justifyContent: "center",}}>
+                      <div className="textProject" style={{  justifyContent: "center", display: "flex"}}>
+                        <h1>
+                          PC  Tracker
+                        </h1>
+                      </div>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={6}>
+                      <Project page={page} image={pc_tracker}/>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={6} style={{alignText: "center"}}>
+                    <div style={{marginTop: "25px", alignText: "center", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column",}}>
+                      <Typography variant="body1">An application intended for the unique identification of a PC in a discrete way without the user's knowledge, currently this application is used to perform tests remotely.</Typography>
+                    </div>
+                    <ProjectButton style={{marginTop: "25px"}}>Go</ProjectButton>
+                    </Grid>
+                    
+              </Grid>
+
+            </Box>
             </div>
 
+          </div>
+          <div className="section">
+            <div className="section2">
+              <Grid container spacing={0}>
+                <Grid item xs={12}>
+                  <div className="text2" style={{  justifyContent: "center", display: "flex"}}>
+                    <h1>
+                      Contact
+                    </h1>
+                  </div>
+                </Grid>
+                <Grid item xs={12} style={{marginTop: "-300px"}}>
+                  <Contact page={page}/>
+                </Grid>
+              </Grid>
+              
+            </div>
+            
           </div>
         </ReactFullpage.Wrapper>
         
       );
     }}
   />
+
   </div>
+  
   </div>
 );
 }
