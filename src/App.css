@@ -2,6 +2,7 @@
   text-align: center;
 }
 .section {
+  height: 100px;
   min-height: 100%;
   color: whitesmoke;
 
@@ -41,19 +42,65 @@
       transform: translateY(-15px);
     }
   }
-.section1 {
+
+
+  .section1Mobile {
+    display: -webkit-box;
+    
+    display: -moz-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    position: absolute;
   
-  background-position: center; /* Center the image */
+    top: 50%;
+  
+    left: 53%;
+  
+    transform: translate(-50%, -50%);
+  
+    margin: 0;  
+    flex-direction: column;
+      /* The image used */
+  
+      /* Set a specific height */
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+  
+  }
+.section1 {
+  display: -webkit-box;
+  
+  display: -moz-box;
+  display: -ms-flexbox; 
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  position: absolute;
+
+  top: 50%;
+
+  left: 52%;
+
+  transform: translate(-50%, -50%);
+
+  margin: 0;  
   flex-direction: column;
     /* The image used */
 
     /* Set a specific height */
-    height: 100%;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -73,8 +120,8 @@
 }
 
 .section2 {
-  background-color: #102424;
   min-height: 100%;
+  height: auto;
   color: whitesmoke;
   display: flex;
   justify-content: center;
@@ -86,6 +133,10 @@
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: all .2s ease-in-out; 
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #cf7a09 !important;
 }
 
 .section3{
@@ -130,7 +181,6 @@
 }
 .text  {
   font-size: 30px;
-  width: 100%;
   z-index: 4;
 
   
@@ -178,19 +228,7 @@
   }
 }
 
- a {
-  background-color: #FF0;
-  
-  -webkit-transition: background-color 1000ms linear;
-  -moz-transition: background-color 1000ms linear;
-  -o-transition: background-color 1000ms linear;
-  -ms-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;
-}
 
-a {
-  background-color: #AD310B;
-}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -200,6 +238,28 @@ a {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.fp-controlArrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-top: -38px;
+}
+.fp-controlArrow.fp-prev {
+  left: 50px;
+  width: 0;
+  border-width: 38.5px 34px 38.5px 0;
+  border-color: transparent #fff transparent transparent;
+}
+.fp-controlArrow.fp-next {
+  right: 50px;
+  border-width: 38.5px 0 38.5px 34px;
+  border-color: transparent transparent transparent #fff;
 }
 
 .App-header {

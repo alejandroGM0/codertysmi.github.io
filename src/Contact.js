@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Collapse from '@mui/material/Collapse';
+import Fade from '@mui/material/Fade';
 
 
 const ContactButton = styled(Button)(({ theme }) => ({
@@ -78,6 +79,9 @@ export default function Contact (props){
           setAnimate(true)
           console.log(animate)
   
+      }
+      else{
+        setAnimate(false)
       }      }, [props.page, animate]);
 
   if (status) {
@@ -102,8 +106,8 @@ export default function Contact (props){
 
   return (
     <form action={FORM_ENDPOINT} onSubmit={handleSubmit}  style={{display: "flex", width: "100%", justifyContent: "center", flexDirection: "column", alignItems: "center", gap: "50px"}} method="post">
-    <Collapse style={{width:"100%"}} orientation="vertical" in={animate} >
-    <div style={{ display: "flex",  justifyContent: "center", alignItems: "center"}}>
+    <Collapse style={{width:"100%", height: "100%"}} orientation="vertical" in={animate} >
+    <div style={{ display: "flex",  justifyContent: "center", alignItems: "center", height: "100%"}}>
 
       <div style={{ backgroundColor: "#142c2c", width: "50%", borderRadius: "20px", height: "55px", display: "flex",  justifyContent: "center", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"}}>
           <Input color="warning" sx={{
@@ -122,8 +126,8 @@ export default function Contact (props){
       </div>
     </div>
     </Collapse>
-    <Collapse style={{width:"100%"}} orientation="vertical" in={animate} >
-      <div style={{ display: "flex",  justifyContent: "center", alignItems: "center"}}>
+    <Collapse style={{width:"100%", height: "100%"}} orientation="vertical" in={animate} >
+    <div style={{ display: "flex",  justifyContent: "center", alignItems: "center", height: "100%"}}>
         <div  style={{ backgroundColor: "#142c2c", width: "50%", borderRadius: "20px", display: "flex",  justifyContent: "center", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"}}>
             <Input  color="warning" sx={{
                     background: "#142c2c",
@@ -142,11 +146,11 @@ export default function Contact (props){
         </div>
       </div>
     </Collapse>
-    <Collapse style={{width:"100%"}} orientation="vertical" in={animate} >
+    <Fade style={{width:"100%"}} orientation="vertical" in={animate} >
     <div style={{ display: "flex",  justifyContent: "center", alignItems: "center"}}>
         <ContactButton size="large" style={{color: "white"}} type="submit">submit</ContactButton>
     </div>
-    </Collapse>
+    </Fade>
 
     </form>
   )

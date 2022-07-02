@@ -11,7 +11,10 @@ export default function Experience(props){
        
         if (props.page === 2){
             setAnimate(true)
-            console.log(animate)}
+            }
+        else{
+            setAnimate(false)
+        }
 
 
       }, [props.page, animate, props.image]);

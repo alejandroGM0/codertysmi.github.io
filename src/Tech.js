@@ -10,8 +10,10 @@ export default function Tech(props){
     useEffect(() => {
         if (props.page === 1){
             setAnimate(true)
-            console.log(animate)
     
+        }
+        else{
+            setAnimate(false)
         }      }, [props.page, animate]);
 
     return(
