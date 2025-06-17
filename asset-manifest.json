@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/codertysmi.github.io/static/css/main.ac340d20.css",
-    "main.js": "/codertysmi.github.io/static/js/main.0d5deb63.js",
-    "static/js/787.1ed0c42c.chunk.js": "/codertysmi.github.io/static/js/787.1ed0c42c.chunk.js",
-    "static/media/groomusic.png": "/codertysmi.github.io/static/media/groomusic.9c12f38ac90e5290b767.png",
-    "static/media/spartbot.png": "/codertysmi.github.io/static/media/spartbot.e8aa1936fc16e0b1a35e.png",
-    "static/media/pc_tracker.png": "/codertysmi.github.io/static/media/pc_tracker.1d63175cbaeca83a7ca2.png",
-    "static/media/gt_logo2.png": "/codertysmi.github.io/static/media/gt_logo2.64e55f972db41b65cd10.png",
-    "static/media/Upwork-Logo.png": "/codertysmi.github.io/static/media/Upwork-Logo.0bc2f59d3a8b5388feb0.png",
-    "static/media/fiver_logo.png": "/codertysmi.github.io/static/media/fiver_logo.1718335177e2c2a261b2.png",
-    "static/media/logo.png": "/codertysmi.github.io/static/media/logo.0f558661f2f3733d65c3.png",
-    "static/media/logo.svg": "/codertysmi.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/codertysmi.github.io/index.html",
-    "main.ac340d20.css.map": "/codertysmi.github.io/static/css/main.ac340d20.css.map",
-    "main.0d5deb63.js.map": "/codertysmi.github.io/static/js/main.0d5deb63.js.map",
-    "787.1ed0c42c.chunk.js.map": "/codertysmi.github.io/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/web/static/css/main.ac340d20.css",
+    "main.js": "/web/static/js/main.ff0cfd66.js",
+    "static/js/787.1ed0c42c.chunk.js": "/web/static/js/787.1ed0c42c.chunk.js",
+    "static/media/groomusic.png": "/web/static/media/groomusic.9c12f38ac90e5290b767.png",
+    "static/media/spartbot.png": "/web/static/media/spartbot.e8aa1936fc16e0b1a35e.png",
+    "static/media/pc_tracker.png": "/web/static/media/pc_tracker.1d63175cbaeca83a7ca2.png",
+    "static/media/gt_logo2.png": "/web/static/media/gt_logo2.64e55f972db41b65cd10.png",
+    "static/media/Upwork-Logo.png": "/web/static/media/Upwork-Logo.0bc2f59d3a8b5388feb0.png",
+    "static/media/fiver_logo.png": "/web/static/media/fiver_logo.1718335177e2c2a261b2.png",
+    "static/media/logo.png": "/web/static/media/logo.0f558661f2f3733d65c3.png",
+    "static/media/logo.svg": "/web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/web/index.html",
+    "main.ac340d20.css.map": "/web/static/css/main.ac340d20.css.map",
+    "main.ff0cfd66.js.map": "/web/static/js/main.ff0cfd66.js.map",
+    "787.1ed0c42c.chunk.js.map": "/web/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac340d20.css",
-    "static/js/main.0d5deb63.js"
+    "static/js/main.ff0cfd66.js"
   ]
 }
